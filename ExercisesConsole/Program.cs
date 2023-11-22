@@ -1,5 +1,50 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+
+#region Использование остатка от деления
+int num1 = 6;
+int num2 = 4;
+
+int ostatok = num1 % num2; // 2 
+#endregion
+
+#region Использование оператора if
+
+// 1 случай. Когда в if используется значение (типа bool - логический тип) погугли что это
+
+bool isRafaFromBClass = false;
+
+if (isRafaFromBClass)
+{
+    Console.WriteLine("Рафа из Б класса");
+}
+else
+{
+    Console.WriteLine("Рафа не из Б класса");
+}
+
+//2 случай. когда испльзуется выражение. Погугли логические операторы в c#
+
+int apelsini = 3;
+
+if(apelsini == 4)
+{
+    Console.WriteLine("У вас 4 апельсина");
+}
+
+//3 случай. Результат логического выражения можно записать в переменную и его использовать в if
+
+int yabloki = 5;
+bool yablokiBolsheApelsinov = yabloki > apelsini;
+
+if (yablokiBolsheApelsinov)
+{
+    Console.WriteLine("Яблок больше чем апельсинов");
+}
+
+#endregion
+
+
 Console.WriteLine("Hello, World!");
 
 bool Task1(int money)

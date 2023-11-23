@@ -51,7 +51,18 @@ bool Task1(int money)
 {
     // У кассира всего 5000 рублей и все эти деньги - монеты по 5 рублей.
     // Узнать может ли он разменять money покупателя
-    throw new NotImplementedException();
+    int kasir = 5000;
+    if (money % 5 == 0)
+
+    {
+        Console.WriteLine("Кассир может разменять деньги");
+
+    }
+    else
+    {
+        Console.WriteLine("Кассир не может разменять деньги");
+    }
+
 }
 
 bool Task2(int[] ageArray)

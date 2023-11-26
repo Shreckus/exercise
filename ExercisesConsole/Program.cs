@@ -1,49 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 
-#region Использование остатка от деления
-int num1 = 6;
-int num2 = 4;
 
-int ostatok = num1 % num2; // 2 
-#endregion
-
-#region Использование оператора if
-
-// 1 случай. Когда в if используется значение (типа bool - логический тип) погугли что это
-
-bool isRafaFromBClass = false;
-
-if (isRafaFromBClass)
-{
-    Console.WriteLine("Рафа из Б класса");
-}
-else
-{
-    Console.WriteLine("Рафа не из Б класса");
-}
-
-//2 случай. когда испльзуется выражение. Погугли логические операторы в c#
-
-int apelsini = 3;
-
-if(apelsini == 4)
-{
-    Console.WriteLine("У вас 4 апельсина");
-}
-
-//3 случай. Результат логического выражения можно записать в переменную и его использовать в if
-
-int yabloki = 5;
-bool yablokiBolsheApelsinov = yabloki > apelsini;
-
-if (yablokiBolsheApelsinov)
-{
-    Console.WriteLine("Яблок больше чем апельсинов");
-}
-
-#endregion
-
+bool result = Task1(500);
 
 Console.WriteLine("Hello, World!");
 
@@ -52,17 +11,24 @@ bool Task1(int money)
     // У кассира всего 5000 рублей и все эти деньги - монеты по 5 рублей.
     // Узнать может ли он разменять money покупателя
     int kasir = 5000;
-    if (money % 5 == 0)
+    int moneta = 5;
+    if (money > kasir)
+
+    {
+        Console.WriteLine("В кассе недостаточно средств.");
+        return false;   
+    }
+    else if (money % moneta == 0)
 
     {
         Console.WriteLine("Кассир может разменять деньги");
-
+        return true;
     }
-    else
-    {
-        Console.WriteLine("Кассир не может разменять деньги");
-    }
-
+        else
+        {
+            Console.WriteLine("Кассир не может разменять деньги");
+            return false;
+        }
 }
 
 bool Task2(int[] ageArray)
